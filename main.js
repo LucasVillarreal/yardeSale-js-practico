@@ -6,6 +6,7 @@ const shoppingCart = document.querySelector('.navbar-shopping-cart')
 const menuShoppingCart = document.querySelector('.my-order')
 const cardsContainer = document.querySelector('.cards-container')
 const productList = []
+const productDetail = document.querySelector('.product-detail')
 
 productList.push({
     name: 'Nike Air',
