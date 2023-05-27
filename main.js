@@ -12,17 +12,47 @@ const imgCloseProductDetail = document.querySelector('.close-product-detail')
 productList.push({
     name: 'Nike Air',
     price: 3200,
-    image: './images/principe-Nike-air-blancaynegra.jpg'
+    image: ''
 })
 productList.push({
     name: 'Nike Just Do It',
     price: 3200,
-    image: './images/principe-Nike-justdoit-xl.jpg'
+    image: ''
 })
 productList.push({
     name: 'Nike Off-White',
     price: 3200,
-    image: './images/principe-Nike-roja-basquet-xxl.jpg'
+    image: ''
+})
+productList.push({
+    name: 'Nike Air',
+    price: 3200,
+    image: ''
+})
+productList.push({
+    name: 'Nike Just Do It',
+    price: 3200,
+    image: ''
+})
+productList.push({
+    name: 'Nike Off-White',
+    price: 3200,
+    image: ''
+})
+productList.push({
+    name: 'Nike Air',
+    price: 3200,
+    image: ''
+})
+productList.push({
+    name: 'Nike Just Do It',
+    price: 3200,
+    image: ''
+})
+productList.push({
+    name: 'Nike Off-White',
+    price: 3200,
+    image: ''
 })
 
 function renderProduct(arr) {
