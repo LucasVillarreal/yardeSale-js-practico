@@ -183,6 +183,8 @@ nav {
 /* Clase 13 */
 .my-order {
     background-color: var(--white);
+    border-left: 1px solid var(--very-light-pink);
+    border-bottom: 1px solid var(--very-light-pink);
     width: 360px;
     position: absolute;
     box-sizing: border-box;
@@ -316,10 +318,15 @@ nav {
 
 /* Clase 12 (Detalle del producto) */
 .product-detail {
+    background-color: var(--white);
+    border-left: 1px solid var(--very-light-pink);
+    border-bottom: 1px solid var(--very-light-pink);
     width: 360px;
     padding-bottom: 24px;
     position: absolute;
     right: 0;
+    border-radius: 6px;
+
 }
 
 .product-detail > img:nth-child(1) {
