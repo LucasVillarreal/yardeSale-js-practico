@@ -7,6 +7,7 @@ const menuShoppingCart = document.querySelector('.my-order')
 const cardsContainer = document.querySelector('.cards-container')
 const productList = []
 const productDetail = document.querySelector('.product-detail')
+const imgCloseProductDetail = document.querySelector('.close-product-detail')
 
 productList.push({
     name: 'Nike Air',
@@ -28,7 +29,9 @@ function renderProduct(arr) {
     for (product of arr) {
         const productCard = document.createElement('div')
         productCard.classList.add('product-card')
-    
+        productCard.addEventListener('click', togglePorductDetail)
+        imgCloseProductDetail.addEventListener('click', togglePorductDetail)
+
         const productImage = document.createElement('img')
         productImage.setAttribute('src', product.image)
     
@@ -66,29 +69,40 @@ shoppingCart.addEventListener('click', toggleShoppingCartMenu)
 
 
 function toggleDesktopMenu() {
-    if (!menuShoppingCart.classList.contains('inactive')) {
+    if (!menuShoppingCart.classList.contains('inactive') || 
+        !productDetail.classList.contains('inactive')) {
         menuShoppingCart.classList.add('inactive')
+        productDetail.classList.add('inactive')
     }
 
     desktopMenu.classList.toggle('inactive')
 }
 
 function toggleMobileMenu() {
-    if (!menuShoppingCart.classList.contains('inactive')) {
+    if (!menuShoppingCart.classList.contains('inactive') || !productDetail.classList.contains('inactive')) {
         menuShoppingCart.classList.add('inactive')
+        productDetail.classList.add('inactive')
     }
 
     mobileMenu.classList.toggle('inactive')
 }
 
 function toggleShoppingCartMenu() {
-    if (!mobileMenu.classList.contains('inactive')) {
+    if (!mobileMenu.classList.contains('inactive') || !productDetail.classList.contains('inactive') || !desktopMenu.classList.contains('inactive')) {
         mobileMenu.classList.add('inactive')
-    }
-
-    if (!desktopMenu.classList.contains('inactive')) {
+        productDetail.classList.add('inactive')
         desktopMenu.classList.add('inactive')
     }
 
     menuShoppingCart.classList.toggle('inactive')
 }
+
+function togglePorductDetail() {
+    if (!desktopMenu.classList.contains('inactive') || !menuShoppingCart.classList.contains('inactive') ||!mobileMenu.classList.contains('inactive')) {
+        desktopMenu.classList.add('inactive')
+        menuShoppingCart.classList.add('inactive')
+        mobileMenu.classList.add('inactive')
+    }
+
+    productDetail.classList.toggle('inactive')
+} 
